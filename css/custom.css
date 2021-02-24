@@ -119,6 +119,6 @@ p
 }
 .navbar-brand
 {
-    font-family: typicons sans-serif;
+    font-family: typicons, sans-serif;
     font-size: 1.35em;
 }
