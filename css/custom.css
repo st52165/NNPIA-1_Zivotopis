@@ -1,11 +1,23 @@
-body { background-color: skyBlue; min-height:200vh;}/* MORE THAN 75 Xl */
-@media (max-width: 74.9em) { body {background-color: pink;} }/* LESS THAN 75 Lg */
-@media (max-width: 61.9em) { body {background-color: blue;} }/* LESS THAN 62 Md */
-@media (max-width: 47.9em) { body {background-color: darkcyan;} }/* LESS THAN 48 Sm */
-@media (max-width: 33.9em) { body {background-color: red;} }/* LESS THAN 34 Xs */
+@font-face {
+    font-family: 'typicons';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../font/typicons.eot');
+    src: url('../font/typicons.eot?#iefix') format('embedded-opentype'),
+    url('../font/typicons.woff') format('woff'),
+    url('../font/typicons.ttf') format('truetype');
+}
+
+html, body
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: skyBlue;
+}
 
 /* Navbar Styles */
-.navbar{border-radius:0;}
+.navbar{border-radius:0; }
 .navbar-toggler{border:1px solid rgba(0,0,0,0.2);}
 .navbar-toggler{background:rgb(240,240,240); }
 .navbar-toggler:hover{background: darkcyan;}
@@ -22,12 +34,91 @@ body { background-color: skyBlue; min-height:200vh;}/* MORE THAN 75 Xl */
 .bg-dark {
     background-color: #343a40;
 }
-
-.info {
+article
+{
+    min-height: 62%;
+    display: flex;
+    flex-direction: column;
+}
+.cover
+{
+    flex: 9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.flex-left {
+    flex: 3;
+    min-width: 500px;
     padding: 3rem 1.5rem;
     text-align: center;
+    background-color: transparent;
+}
+.flex-right {
+    flex:1;
+    min-width: 500px;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background-color: transparent;
 }
 .navbar-brand:hover, .nav-link:hover
 {
     color: darkcyan !important;
+}
+.img-container
+{
+    min-height: 30%;
+    background-image: url("../img/8.jpg");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    position: relative;
+}
+.inner-container
+{
+    text-align: center;
+    width: 100%;
+    color: white;
+    height: auto;
+    padding: 3% 0;
+}
+.inner-container h1, .inner-container h2
+{
+    text-shadow: #a3d7a3 0 0 5px;
+    transition: text-shadow 3s;
+}
+.inner-container h1:hover, .inner-container h2:hover
+{
+    text-shadow: whitesmoke 15px -10px 5px;
+}
+
+.btn, .btn:visited
+{
+    margin-top: 0.7em;
+    border-radius: 0.7em;
+    transition: background-color 3s;
+    background-color: #8b211e;
+    color: white;
+}
+.btn:hover
+{
+    background-color: #a3d7a3;
+}
+
+p
+{
+    text-align: justify;
+    line-height: 1.5em;
+}
+#student
+{
+    width: 18%;
+    border-radius: 100%;
+    margin-bottom: 1%;
+}
+.navbar-brand
+{
+    font-family: typicons sans-serif;
+    font-size: 1.35em;
 }
